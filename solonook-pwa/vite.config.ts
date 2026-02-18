@@ -5,6 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 // TIP: For GitHub Pages, set base to '/<repo-name>/'.
 // Example: base: '/solonook-pwa/'
 export default defineConfig({
+  base: '/solonook/',
   plugins: [
     react(),
     VitePWA({
