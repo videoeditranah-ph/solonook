@@ -7,6 +7,9 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   base: '/solonook/',
   plugins: [
+    ...
+  ]
+});
     react(),
     VitePWA({
       registerType: 'autoUpdate',
