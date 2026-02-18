@@ -28,15 +28,17 @@ jobs:
           cache: npm
 
       - name: Install
-        run: npm ci
+  working-directory: solonook-pwa
+  run: npm ci
 
-      - name: Build
-        run: npm run build
+- name: Build
+  working-directory: solonook-pwa
+  run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+  uses: actions/upload-pages-artifact@v3
+  with:
+    path: solonook-pwa/dist
 
   deploy:
     environment:
